@@ -1,7 +1,16 @@
+
 class Model {
-  const Model();
-
-  factory Model.fromMap(Map<String, dynamic> map) => Model();
-
-  Map<String, dynamic> toMap() => {};
+  Model({required this.hello});
+  
+  factory Model.fromMap(Map<String, dynamic> map) => Model(
+      hello: map['Hello'],
+  );
+  
+  String hello;
+  
+  Map<String, dynamic> toMap() => {
+      'Hello': hello,
+  };
+  
 }
+
